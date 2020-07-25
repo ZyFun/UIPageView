@@ -24,9 +24,11 @@ class ContentViewController: UIViewController {
         
         descriptionHelp.text = presentText
         emojiSymbol.text = emoji
+        pageControl.numberOfPages = numberOfPage
         pageControl.currentPage = currentPage
-        pageControl.numberOfPages = numberOfPage 
-
-        // Do any additional setup after loading the view.
+        
+        
     }
+    
 }
+ 
