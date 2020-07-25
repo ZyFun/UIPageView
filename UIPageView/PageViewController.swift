@@ -14,11 +14,10 @@ class PageViewController: UIPageViewController {
         "Первая страница презентации, рассказывающая о том, что наше приложение из себя предстваляет",
         "Вторая страница презентации, рассказывает о какой то удобной фишке приложения",
         "Третья страница презентации тоже рассказывает о главных фишках",
-        "Последняя страница, с напутствием в добрый путь",
-        ""
+        "Последняя страница, с напутствием в добрый путь"
     ]
     
-    let emojiArray = ["🤓", "✌🏻", "😳", "😷", ""]
+    let emojiArray = ["🤓", "✌🏻", "😳", "😷"]
     override func viewDidLoad() {
         super.viewDidLoad()
         // Назначаем класс делегатом протокола
@@ -35,13 +34,7 @@ class PageViewController: UIPageViewController {
     func showViewControllerAtIndex(_ index: Int) -> ContentViewController? {
         
         guard index >= 0 else { return nil}
-        guard index < presentTextArray.count else {
-            // Присваиваем приложению настройку для сохранения ключа просмотра презентации
-            let userDefaults = UserDefaults.standard
-            userDefaults.set(true, forKey: "PresentationWasViewed")
-            // Закрываем презентацию после прочтения последнего слайда
-            dismiss(animated: true, completion: nil)
-            return nil}
+        guard index < presentTextArray.count else { return nil }
         guard let contentViewController = storyboard?.instantiateViewController(withIdentifier: "Content") as? ContentViewController else { return nil }
         
         contentViewController.presentText = presentTextArray[index]

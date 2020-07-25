@@ -19,7 +19,7 @@ class ViewController: UIViewController {
     
     // Метод, запускающий презентацию
     func startPresentation() {
-        // Если презентацию уже просмотрели, то она не запусстится
+        // Если презентацию уже просмотрели, то она не запусстится, так как ключу присвоено значение True
         let userDefaults = UserDefaults.standard
         let presentationWasViewed = userDefaults.bool(forKey: "PresentationWasViewed")
         if presentationWasViewed == false {

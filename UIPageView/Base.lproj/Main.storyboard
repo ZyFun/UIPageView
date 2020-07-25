@@ -65,14 +65,31 @@
                             <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="d7J-7x-TJ7">
                                 <rect key="frame" x="168" y="741" width="39" height="37"/>
                             </pageControl>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uvv-eP-uTE">
+                                <rect key="frame" x="105" y="690" width="165" height="43"/>
+                                <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="43" id="qDe-6Z-asj"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Поехали!">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="goActionButton:" destination="Uyx-cQ-NVD" eventType="touchUpInside" id="3qz-QB-jBb"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.29411764709999999" green="0.81826599430000002" blue="0.81960784310000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="815-UU-HlH" firstAttribute="trailing" secondItem="VMp-b4-pTn" secondAttribute="trailing" constant="16" id="1Ah-Jj-fpl"/>
+                            <constraint firstItem="d7J-7x-TJ7" firstAttribute="top" secondItem="Uvv-eP-uTE" secondAttribute="bottom" constant="8" id="2iS-XH-nG6"/>
                             <constraint firstItem="8Lg-sf-IwW" firstAttribute="centerX" secondItem="815-UU-HlH" secondAttribute="centerX" id="CPj-Z6-Y3c"/>
+                            <constraint firstItem="Uvv-eP-uTE" firstAttribute="centerX" secondItem="d7J-7x-TJ7" secondAttribute="centerX" id="CgQ-b1-a9Z"/>
                             <constraint firstItem="VMp-b4-pTn" firstAttribute="top" secondItem="815-UU-HlH" secondAttribute="top" constant="108" id="O1d-BY-C8a"/>
                             <constraint firstItem="8Lg-sf-IwW" firstAttribute="centerY" secondItem="815-UU-HlH" secondAttribute="centerY" id="XMF-AX-buF"/>
                             <constraint firstItem="VMp-b4-pTn" firstAttribute="leading" secondItem="815-UU-HlH" secondAttribute="leading" constant="16" id="eqZ-1s-diq"/>
+                            <constraint firstItem="Uvv-eP-uTE" firstAttribute="leading" secondItem="815-UU-HlH" secondAttribute="leading" constant="105" id="iSF-kp-VhQ"/>
                             <constraint firstItem="815-UU-HlH" firstAttribute="bottom" secondItem="d7J-7x-TJ7" secondAttribute="bottom" id="nkr-xO-9fR"/>
                             <constraint firstItem="d7J-7x-TJ7" firstAttribute="centerX" secondItem="815-UU-HlH" secondAttribute="centerX" id="vow-9N-63x"/>
                         </constraints>
@@ -81,6 +98,7 @@
                     <connections>
                         <outlet property="descriptionHelp" destination="VMp-b4-pTn" id="GqH-C3-vRB"/>
                         <outlet property="emojiSymbol" destination="8Lg-sf-IwW" id="QOL-Da-buK"/>
+                        <outlet property="goButton" destination="Uvv-eP-uTE" id="xE7-r8-mbG"/>
                         <outlet property="pageControl" destination="d7J-7x-TJ7" id="tRt-zV-zHD"/>
                     </connections>
                 </viewController>
