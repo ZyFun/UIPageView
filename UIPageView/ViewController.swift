@@ -17,10 +17,17 @@ class ViewController: UIViewController {
         startPresentation()
     }
     
+    // Метод, запускающий презентацию
     func startPresentation() {
-        if let pageViewController = storyboard?.instantiateViewController(withIdentifier: "PageViewController") as? PageViewController? {
-            present(pageViewController!, animated:true, completion: nil)
+        // Если презентацию уже просмотрели, то она не запусстится
+        let userDefaults = UserDefaults.standard
+        let presentationWasViewed = userDefaults.bool(forKey: "PresentationWasViewed")
+        if presentationWasViewed == false {
+            // Запуск презентации
+            if let pageViewController = storyboard?.instantiateViewController(withIdentifier: "PageViewController") as? PageViewController? {
+                
+                present(pageViewController!, animated:true, completion: nil)
+            }
         }
     }
 }
-

@@ -36,6 +36,9 @@ class PageViewController: UIPageViewController {
         
         guard index >= 0 else { return nil}
         guard index < presentTextArray.count else {
+            // Присваиваем приложению настройку для сохранения ключа просмотра презентации
+            let userDefaults = UserDefaults.standard
+            userDefaults.set(true, forKey: "PresentationWasViewed")
             // Закрываем презентацию после прочтения последнего слайда
             dismiss(animated: true, completion: nil)
             return nil}
